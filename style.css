@@ -1,0 +1,21 @@
+body {
+    background-color: #fefefe;
+}
+.input{
+    position: relative;
+}
+.submit {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    display:block;
+    width: 300px;
+    height: 75px;
+    background-color: #a50608;
+    color: white;
+    font-size: 2.5rem;
+    border: 3px solid #440001;
+    cursor: pointer;
+}
+.output {
+    margin-left: 2rem;
+}
