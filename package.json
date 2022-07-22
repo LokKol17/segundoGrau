@@ -1,0 +1,20 @@
+{
+  "name": "segundograu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LokKol17/segundoGrau.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LokKol17/segundoGrau/issues"
+  },
+  "homepage": "https://github.com/LokKol17/segundoGrau#readme"
+}

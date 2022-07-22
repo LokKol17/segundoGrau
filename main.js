@@ -1,3 +1,5 @@
+//import { fracionar } from 'fracionador.js'
+
 let submit = window.document.querySelector('#submit')
 submit.addEventListener('click', executaEquacao)
 
@@ -48,13 +50,54 @@ let res = document.querySelector('#res')
             let raiz = Math.sqrt(triangulin)
             console.log("A raiz de " + triangulin + " eh " + raiz)
 
+            // console.log((2 * a), (-(b)))
+            // let final = fracionar((2 * a), (-(b)))
+
             let todoPos = (-(b) + raiz) / (2 * a)
             console.log("X! = " + todoPos)
+            let fraPos = geratriz(todoPos)
+            console.log(fraPos)
+            
 
             let todoNeg = (-(b) - raiz) / (2 * a)
             console.log("X!! = " + todoNeg)
+            let fraNeg = geratriz(todoNeg)
+            console.log(fraNeg)
 
-           res.innerHTML = `x<sup>|</sup> = ${todoPos} <br> x<sup>||</sup> = ${todoNeg}`
+            if (Number.isInteger(todoPos) && Number.isInteger(todoNeg)) {
+                res.innerHTML = 
+                `x<sup>|</sup> = ${todoPos}<br>
+                 x<sup>||</sup> = ${todoNeg}`
+            } else {
+                res.innerHTML = 
+                `x<sup>|</sup> = ${todoPos} ou ${fraPos}<br>
+                 x<sup>||</sup> = ${todoNeg} ou ${fraNeg}`
+            }
+
+
         }
 }
 //executaEquacao()
+function fracionar(a, b) {
+    let valorA = a
+    let valorB = b
+    for(let i = 2; i < (a+b); i++) {
+
+        if(valorA % i == 0 && valorB % i == 0) {
+            valorA = valorA / i
+            valorB = valorB / i
+        }
+
+    }
+    //console.log(`${valorA} / ${valorB}`)
+    let final = `${valorA} / ${valorB}`
+    return final
+  }
+
+  function geratriz(DP) {
+    let x = DP
+    let x10 = (x * 10)
+    let x9 = x10 - x
+    let res = fracionar(x9.toFixed(0), 9)//`${x9.toFixed(0)}/9`
+    return res
+}
