@@ -1,21 +1,83 @@
+@keyframes anime { 
+    25% {transform: translateY(500px);}
+    50% {transform: translate(800px 0); background-color: #aFaFaD;}
+    65% {background-color: #3F4F8D;}
+}
+
 body {
-    background-color: #fefefe;
+    background-color: #000;
+    background: url("https://media.istockphoto.com/photos/starry-outer-space-background-texture-picture-id1064074580?k=20&m=1064074580&s=170667a&w=0&h=akiw5A9_RGa85zQKs513jAO0Du9e5otCri3J0AqjC1E=");
+
 }
-.input{
-    position: relative;
+.input {
+    display: block;
 }
-.submit {
-    margin-left: 2rem;
-    margin-top: 2rem;
-    display:block;
-    width: 300px;
-    height: 75px;
-    background-color: #a50608;
-    color: white;
-    font-size: 2.5rem;
-    border: 3px solid #440001;
-    cursor: pointer;
-}
+
 .output {
     margin-left: 2rem;
+}
+/* ///////////////////////////////////// */
+
+.principal {
+    margin: 2rem auto;
+    background: linear-gradient(to top right, #111111, #222222);
+    color: #fff;
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px black;
+    border-left: 1px solid #fefefe50;
+    border-top: 1px solid #fefefe20;
+}
+
+.input input {
+    display: block;
+    width: 70%;
+    height: 1.4rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    margin: .5rem 0;
+}
+.submit {
+    margin-top: 2rem;
+    display:block;
+    width: 200px;
+    height: 55px;
+    background-color: #4a4a4a;
+    color: white;
+    font-size: 2rem;
+    border: 3px solid #2f2f2f;
+    cursor: pointer;
+    transition: all .5s;
+    box-sizing: border-box;
+}
+.submit:hover {
+    transition: all .5s;
+    transform: scale(1.09);
+    background-color: #8a8a8a;
+    border: 1px solid transparent;
+}
+.submit:active {
+    transition: all .1s;
+    transform: scale(1.1);
+    background-color: #3F4F8D;
+}
+.copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    border-radius: 30px;
+    width: 100px;
+    height: 100px;
+    background-color: #3F4F8D;
+    color: white;
+    transition: all 5s;
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
